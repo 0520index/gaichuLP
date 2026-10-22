@@ -376,7 +376,7 @@ body.menu-open .floating-cta {
     max-width: var(--lp-width);
     margin: 0 auto;
     padding: 0;
-    background: #fff;
+    background: #e7f3ff;
 }
 
 .section-visual {
@@ -521,12 +521,12 @@ body.menu-open .floating-cta {
 .ad-band {
     position: relative;
     margin: 0;
-    padding: 22px 16px 20px;
+    padding: 16px 16px 14px;
     text-align: center;
     color: #fff;
     background: linear-gradient(180deg, #3aa0f5 0%, #0d74e6 100%);
-    border-top: 4px solid var(--yellow);
-    border-bottom: 4px solid var(--yellow);
+    border-top: 3px solid var(--yellow);
+    border-bottom: 3px solid var(--yellow);
     box-shadow: none;
 }
 
@@ -538,8 +538,8 @@ body.menu-open .floating-cta {
 
 .ad-band--alert {
     background: linear-gradient(180deg, #3aa0f5 0%, #0d74e6 100%);
-    border-top: 4px solid var(--yellow);
-    border-bottom: 4px solid var(--yellow);
+    border-top: 3px solid var(--yellow);
+    border-bottom: 3px solid var(--yellow);
 }
 
 .ad-band--slim {
@@ -573,32 +573,33 @@ body.menu-open .floating-cta {
 
 .ad-band-text {
     font-family: var(--display);
-    font-size: clamp(16px, 4.6vw, 21px);
+    font-size: clamp(15px, 4vw, 18px);
     font-weight: 900;
-    line-height: 1.5;
-    margin-bottom: 16px;
+    line-height: 1.45;
+    margin-bottom: 12px;
     text-shadow: none;
 }
 
 .ad-band-tag {
     display: inline-block;
     width: fit-content;
-    margin: 0 0 10px;
-    padding: 4px 14px;
+    margin: 0 8px 4px 0;
+    padding: 2px 10px;
     font-size: 11px;
-    letter-spacing: .12em;
+    letter-spacing: .08em;
+    vertical-align: 2px;
     color: var(--dark-blue);
     background: var(--yellow);
     border-radius: 999px;
     text-shadow: none;
-    box-shadow: 0 2px 0 #c9a800;
+    box-shadow: none;
 }
 
 .ad-band-text em {
-    display: block;
-    margin-top: 4px;
+    display: inline;
+    margin-top: 0;
     font-style: normal;
-    font-size: 1.15em;
+    font-size: 1.05em;
     color: var(--yellow);
 }
 
@@ -606,16 +607,16 @@ body.menu-open .floating-cta {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 8px;
     width: 100%;
-    max-width: 380px;
+    max-width: 340px;
     margin: 0 auto;
-    padding: 14px 18px;
+    padding: 8px 14px;
     color: #fff;
     background: linear-gradient(180deg, #ff4d52 0%, var(--red) 55%, var(--dark-red) 100%);
-    border: 3px solid #fff;
-    border-radius: 14px;
-    box-shadow: 0 6px 0 #7a0c10, 0 12px 24px rgba(0, 0, 0, 0.3);
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 0 #7a0c10;
     animation: ad-band-pulse 2.2s ease-in-out infinite;
     transition: transform .15s ease, box-shadow .15s ease;
 }
@@ -631,8 +632,8 @@ body.menu-open .floating-cta {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    width: 46px;
-    height: 46px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     background: #fff;
     color: var(--red);
@@ -646,13 +647,13 @@ body.menu-open .floating-cta {
 }
 
 .ad-band-tel-body small {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     color: #ffe8e9;
 }
 
 .ad-band-tel-body strong {
-    font-size: clamp(24px, 7vw, 30px);
+    font-size: clamp(18px, 5vw, 22px);
     font-weight: 900;
     letter-spacing: .02em;
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
@@ -661,16 +662,16 @@ body.menu-open .floating-cta {
 .ad-band-mail {
     display: block;
     width: 100%;
-    max-width: 380px;
-    margin: 14px auto 0;
-    padding: 12px 16px;
-    font-size: 15px;
+    max-width: 340px;
+    margin: 8px auto 0;
+    padding: 8px 14px;
+    font-size: 14px;
     font-weight: 900;
     color: var(--dark-blue);
     background: #fffb00;
-    border: 3px solid var(--yellow);
+    border: 2px solid #fff6a8;
     border-radius: 999px;
-    box-shadow: 0 4px 0 #c9a800;
+    box-shadow: 0 3px 0 #c9a800;
 }
 
 .ad-band-mail::after {
@@ -688,9 +689,9 @@ body.menu-open .floating-cta {
 .section-bridge {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     margin: 0;
-    padding: 14px 16px;
+    padding: 18px 20px;
     color: #fff;
     background: linear-gradient(90deg, #0857b3 0%, #0d74e6 100%);
     border-top: 4px solid var(--yellow);
@@ -698,8 +699,7 @@ body.menu-open .floating-cta {
 }
 
 .ad-band + .section-bridge {
-    border-top: 0;
-    background: linear-gradient(180deg, #0857b3 0%, #0d74e6 100%);
+    margin-top: 28px;
 }
 
 .section-bridge-no {
@@ -728,10 +728,10 @@ body.menu-open .floating-cta {
 
 @keyframes ad-band-pulse {
     0%, 100% {
-        box-shadow: 0 6px 0 #7a0c10, 0 12px 24px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(255, 225, 0, 0.55);
+        box-shadow: 0 3px 0 #7a0c10, 0 0 0 0 rgba(255, 225, 0, 0.45);
     }
     50% {
-        box-shadow: 0 6px 0 #7a0c10, 0 12px 24px rgba(0, 0, 0, 0.3), 0 0 0 10px rgba(255, 225, 0, 0);
+        box-shadow: 0 3px 0 #7a0c10, 0 0 0 6px rgba(255, 225, 0, 0);
     }
 }
 
