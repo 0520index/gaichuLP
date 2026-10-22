@@ -36,7 +36,7 @@ body {
     color: var(--text);
     line-height: 1.6;
     font-size: 15px;
-    background: #d9dde3;
+    background: #e7f3ff;
 }
 
 h1, h2, h3,
@@ -71,7 +71,7 @@ img {
     background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(8px);
     box-shadow: 0 -6px 24px rgba(15, 61, 122, 0.18);
-    border-top: 3px solid var(--ink);
+    border-top: 3px solid var(--light-blue);
 }
 
 .floating-cta.is-hidden {
@@ -159,14 +159,14 @@ body.menu-open .floating-cta {
     background: #fff;
     position: relative;
     z-index: 500;
-    border-bottom: 3px solid var(--ink);
+    border-bottom: 3px solid var(--light-blue);
     box-shadow: none;
 }
 
 /* キャンペーン帯 */
 
 .campaign-bar {
-    background: var(--ink);
+    background: linear-gradient(90deg, #0a4ea3 0%, var(--blue) 50%, #0a4ea3 100%);
     color: #fff;
     text-align: center;
     padding: 10px 12px;
@@ -177,7 +177,7 @@ body.menu-open .floating-cta {
 
 .campaign-bar em {
     font-style: normal;
-    color: #ffb4b8;
+    color: var(--yellow);
     font-size: 1.15em;
 }
 
@@ -368,7 +368,7 @@ body.menu-open .floating-cta {
 
 .lp-stage {
     width: 100%;
-    background: #d9dde3;
+    background: #e7f3ff;
 }
 
 .lp-visual-rail {
@@ -521,12 +521,12 @@ body.menu-open .floating-cta {
 .ad-band {
     position: relative;
     margin: 0;
-    padding: 28px 16px 24px;
+    padding: 22px 16px 20px;
     text-align: center;
     color: #fff;
-    background: var(--ink);
-    border-top: 0;
-    border-bottom: 0;
+    background: linear-gradient(180deg, #3aa0f5 0%, #0d74e6 100%);
+    border-top: 4px solid var(--yellow);
+    border-bottom: 4px solid var(--yellow);
     box-shadow: none;
 }
 
@@ -537,35 +537,34 @@ body.menu-open .floating-cta {
 }
 
 .ad-band--alert {
-    background:
-        linear-gradient(180deg, rgba(230, 0, 18, 0.18), transparent 40%),
-        var(--ink);
-    border-top: 3px solid var(--red);
+    background: linear-gradient(180deg, #3aa0f5 0%, #0d74e6 100%);
+    border-top: 4px solid var(--yellow);
+    border-bottom: 4px solid var(--yellow);
 }
 
 .ad-band--slim {
     padding: 22px 16px 20px;
-    background: #f4f5f7;
-    color: var(--ink);
-    border-top: 1px solid #d8dde4;
-    border-bottom: 1px solid #d8dde4;
+    background: linear-gradient(180deg, #fff8c4 0%, var(--yellow) 100%);
+    color: var(--dark-blue);
+    border-top: 0;
+    border-bottom: 0;
 }
 
 .ad-band--slim .ad-band-text {
     text-shadow: none;
-    color: var(--ink);
+    color: var(--dark-blue);
 }
 
 .ad-band--slim .ad-band-tag {
-    color: #fff;
-    background: var(--mint);
-    box-shadow: none;
+    color: var(--dark-blue);
+    background: #fff;
+    box-shadow: 0 2px 0 rgba(0, 63, 125, 0.18);
 }
 
 .ad-band--slim .ad-band-mail {
-    color: var(--ink);
+    color: var(--dark-blue);
     background: #fff;
-    border-color: var(--ink);
+    border-color: #fff;
 }
 
 .ad-band--slim .ad-band-text em {
@@ -585,14 +584,14 @@ body.menu-open .floating-cta {
     display: inline-block;
     width: fit-content;
     margin: 0 0 10px;
-    padding: 4px 12px;
+    padding: 4px 14px;
     font-size: 11px;
     letter-spacing: .12em;
-    color: #fff;
-    background: var(--red);
-    border-radius: 2px;
+    color: var(--dark-blue);
+    background: var(--yellow);
+    border-radius: 999px;
     text-shadow: none;
-    box-shadow: none;
+    box-shadow: 0 2px 0 #c9a800;
 }
 
 .ad-band-text em {
@@ -682,6 +681,49 @@ body.menu-open .floating-cta {
 .ad-band-mail:active {
     transform: translateY(3px);
     box-shadow: 0 1px 0 #c9a800;
+}
+
+/* 画像セクションの区切り。相談帯と同じ青・黄で統一 */
+
+.section-bridge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    padding: 14px 16px;
+    color: #fff;
+    background: linear-gradient(90deg, #0857b3 0%, #0d74e6 100%);
+    border-top: 4px solid var(--yellow);
+    border-bottom: 4px solid var(--yellow);
+}
+
+.ad-band + .section-bridge {
+    border-top: 0;
+    background: linear-gradient(180deg, #0857b3 0%, #0d74e6 100%);
+}
+
+.section-bridge-no {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    font-family: var(--display);
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--dark-blue);
+    background: var(--yellow);
+    border-radius: 50%;
+    box-shadow: 0 2px 0 #c9a800;
+}
+
+.section-bridge p {
+    margin: 0;
+    font-family: var(--display);
+    font-size: clamp(16px, 4.4vw, 20px);
+    font-weight: 900;
+    line-height: 1.35;
 }
 
 @keyframes ad-band-pulse {
@@ -1144,7 +1186,7 @@ body.menu-open .floating-cta {
         max-width: calc(var(--lp-width) + 280px + 24px + 48px);
         margin: 0 auto;
         padding: 24px 24px 40px;
-        background: #d9dde3;
+        background: #e7f3ff;
     }
 
     .lp-visual-rail {
@@ -1183,13 +1225,13 @@ body.menu-open .floating-cta {
         flex-direction: column;
         align-items: stretch;
         justify-content: flex-start;
-        background: var(--ink);
+        background: linear-gradient(180deg, #0d6ad4 0%, var(--dark-blue) 100%);
         color: #fff;
         padding: 22px 18px;
-        border-radius: 0;
+        border-radius: 16px;
         text-align: center;
         border: 4px solid var(--yellow);
-        box-shadow: 0 8px 0 rgba(0, 0, 0, 0.15);
+        box-shadow: 0 8px 0 rgba(0, 63, 125, 0.25);
     }
 }
 
@@ -1412,18 +1454,18 @@ body.menu-open .floating-cta {
     }
 }
 
-/* HTMLセクション共通の見出し（害虫版：フラット） */
+/* HTMLセクション共通の見出し */
 
 .section-title,
 .section-title--plain {
     position: relative;
     margin-bottom: 28px;
-    padding: 8px 0 16px;
-    text-align: left;
-    color: var(--ink);
+    padding: 4px 0 0;
+    text-align: center;
+    color: var(--dark-blue);
     background: none;
     border-top: 0;
-    border-bottom: 2px solid var(--ink);
+    border-bottom: 0;
 }
 
 .section-title::after,
@@ -1433,18 +1475,18 @@ body.menu-open .floating-cta {
 
 .section-title .en,
 .section-title--plain .en {
-    display: block;
+    display: inline-block;
     width: fit-content;
-    margin: 0 0 8px;
-    padding: 0;
+    margin: 0 auto 10px;
+    padding: 4px 14px;
     font-size: 11px;
     font-weight: 900;
-    letter-spacing: .18em;
-    color: var(--mint);
-    background: none;
+    letter-spacing: .16em;
+    color: var(--dark-blue);
+    background: var(--yellow);
     border: 0;
-    border-radius: 0;
-    box-shadow: none;
+    border-radius: 999px;
+    box-shadow: 0 2px 0 #c9a800;
 }
 
 .section-title h2,
@@ -1452,15 +1494,16 @@ body.menu-open .floating-cta {
     display: block;
     font-size: clamp(22px, 6vw, 30px);
     line-height: 1.4;
-    color: var(--ink);
+    color: var(--dark-blue);
     background: none;
     text-shadow: none;
 }
 
 .section-title h2 em,
 .section-title--plain h2 em {
-    color: var(--ink);
-    background: linear-gradient(transparent 68%, rgba(230, 0, 18, 0.28) 68%);
+    font-style: normal;
+    color: var(--red);
+    background: linear-gradient(transparent 68%, rgba(255, 225, 0, 0.85) 68%);
     padding: 0 2px;
 }
 
@@ -1469,11 +1512,11 @@ body.menu-open .floating-cta {
     display: block;
     width: auto;
     max-width: 36em;
-    margin: 10px 0 0;
+    margin: 10px auto 0;
     padding: 0;
     font-size: 14px;
-    font-weight: 500;
-    color: #5a6472;
+    font-weight: 700;
+    color: #3d5f86;
     background: none;
     box-shadow: none;
 }
@@ -1481,19 +1524,22 @@ body.menu-open .floating-cta {
 /* FAQ */
 
 .faq {
-    background: #f7f8fa;
+    background:
+        radial-gradient(circle at 0 0, rgba(0, 165, 241, 0.16), transparent 32%),
+        #e7f3ff;
+    border-top: 4px solid var(--yellow);
 }
 
 .faq-list {
-    gap: 10px;
+    gap: 12px;
 }
 
 .faq-item {
     background: #fff;
-    border: 1px solid #e4e7ec;
-    border-radius: 0;
-    box-shadow: none;
-    border-left: 4px solid var(--ink);
+    border: 3px solid #b9dcff;
+    border-radius: 16px;
+    box-shadow: 0 4px 0 rgba(0, 85, 165, 0.12);
+    border-left: 3px solid #b9dcff;
 }
 
 .faq-question {
@@ -1502,7 +1548,7 @@ body.menu-open .floating-cta {
     font-size: 15px;
     font-weight: 900;
     line-height: 1.5;
-    background: #fff;
+    background: linear-gradient(180deg, #fff 0%, #f4f9ff 100%);
 }
 
 .faq-question .q-icon {
@@ -1510,8 +1556,9 @@ body.menu-open .floating-cta {
     height: 34px;
     min-width: 34px;
     font-size: 17px;
-    background: var(--ink);
+    background: linear-gradient(170deg, #1a78e0, var(--dark-blue));
     box-shadow: none;
+    border-radius: 50%;
 }
 
 .faq-question .chevron {
@@ -1521,9 +1568,9 @@ body.menu-open .floating-cta {
     width: 26px;
     height: 26px;
     font-size: 14px;
-    color: #fff;
-    background: var(--red);
-    border-radius: 2px;
+    color: var(--dark-blue);
+    background: var(--yellow);
+    border-radius: 50%;
 }
 
 .faq-answer {
@@ -1532,8 +1579,8 @@ body.menu-open .floating-cta {
 
 .faq-answer.open {
     padding: 16px 16px 18px;
-    border-top: 1px solid #e4e7ec;
-    background: #fafbfc;
+    border-top: 3px solid var(--yellow);
+    background: #fffdf3;
 }
 
 .faq-answer .a-icon {
@@ -1546,7 +1593,7 @@ body.menu-open .floating-cta {
     font-size: 15px;
     color: #fff;
     background: var(--red);
-    border-radius: 2px;
+    border-radius: 50%;
     vertical-align: middle;
     box-shadow: none;
 }
@@ -1559,8 +1606,10 @@ body.menu-open .floating-cta {
 
 .contact {
     padding-bottom: 56px;
-    background: var(--ink);
-    border-top: 0;
+    background:
+        radial-gradient(circle at 100% 0, rgba(255, 225, 0, 0.2), transparent 28%),
+        linear-gradient(165deg, #1a78e0 0%, var(--blue) 46%, var(--dark-blue) 100%);
+    border-top: 4px solid var(--yellow);
 }
 
 .contact .section-title,
@@ -1579,10 +1628,10 @@ body.menu-open .floating-cta {
 
 .contact .section-title .en,
 .contact .section-title--plain .en {
-    color: #ff8a90;
-    background: none;
+    color: var(--dark-blue);
+    background: var(--yellow);
     border: 0;
-    box-shadow: none;
+    box-shadow: 0 2px 0 #c9a800;
 }
 
 .contact .section-title h2,
@@ -1607,9 +1656,10 @@ body.menu-open .floating-cta {
     padding: 22px 18px 24px;
     color: var(--text);
     background: #fff;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
+    border: 4px solid var(--yellow);
+    border-radius: 16px;
+    box-shadow: 0 8px 0 rgba(0, 40, 90, 0.22);
+    overflow: hidden;
 }
 
 .contact-info h3,
@@ -1617,14 +1667,14 @@ body.menu-open .floating-cta {
     margin: -22px -18px 18px;
     padding: 14px 16px;
     font-size: 17px;
-    text-align: left;
+    text-align: center;
     color: #fff;
     background: var(--red);
     border-bottom: 0;
 }
 
 .contact-form h3 {
-    background: var(--ink-soft);
+    background: linear-gradient(170deg, #1a78e0, var(--dark-blue));
 }
 
 .tel-big {
@@ -1644,7 +1694,7 @@ body.menu-open .floating-cta {
     font-size: 13px;
     font-weight: 700;
     text-align: center;
-    color: var(--ink);
+    color: var(--dark-blue);
     opacity: 1;
 }
 
@@ -1654,7 +1704,7 @@ body.menu-open .floating-cta {
     font-size: 13px;
     font-weight: 700;
     line-height: 2;
-    background: var(--sand);
+    background: #eef6ff;
     opacity: 1;
 }
 
@@ -1681,7 +1731,7 @@ body.menu-open .floating-cta {
 }
 
 .form-group label {
-    color: var(--ink);
+    color: var(--dark-blue);
     font-weight: 900;
     opacity: 1;
 }
@@ -1701,8 +1751,8 @@ body.menu-open .floating-cta {
 .form-group textarea:focus {
     outline: none;
     background: #fff;
-    border-color: var(--ink);
-    box-shadow: 0 0 0 3px rgba(26, 31, 38, 0.12);
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(255, 225, 0, 0.7);
 }
 
 .btn-submit {
@@ -1727,9 +1777,9 @@ body.menu-open .floating-cta {
 /* FOOTER */
 
 .site-footer {
-    color: #c8ced6;
-    background: #12161c;
-    border-top: 0;
+    color: #d6e8ff;
+    background: linear-gradient(180deg, var(--dark-blue) 0%, #00284f 100%);
+    border-top: 4px solid var(--light-blue);
 }
 
 .footer-logo {
@@ -1750,13 +1800,13 @@ body.menu-open .floating-cta {
     text-decoration: none;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.28);
-    border-radius: 2px;
+    border-radius: 999px;
 }
 
 .footer-links a:hover {
-    color: #fff;
-    background: var(--red);
-    border-color: var(--red);
+    color: var(--dark-blue);
+    background: var(--yellow);
+    border-color: var(--yellow);
 }
 
 .footer-info a {
